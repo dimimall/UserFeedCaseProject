@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "DB34F38C-388E-4485-983F-8A9213E4888E",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:UserFeedFramework.xcodeproj",
+        "identifier" : "0D39FEC32F717AD9009D93FF",
+        "name" : "UserFeedFrameworkTests"
+      }
+    }
+  ],
+  "version" : 1
+}

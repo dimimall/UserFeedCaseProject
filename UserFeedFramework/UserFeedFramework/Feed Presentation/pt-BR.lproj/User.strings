@@ -1,0 +1,10 @@
+/* 
+  User.strings
+  UserFeedFramework
+
+  Created by Dimitra Malliarou on 20/4/26.
+  
+*/
+
+"USER_VIEW_TITLE" = "Meu User";
+"USER_VIEW_CONNECTION_ERROR" = "Não foi possível conectar com o servidor";

@@ -23,6 +23,7 @@
 /* Begin PBXFileReference section */
 		0D39FEB92F717AD9009D93FF /* UserFeedFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserFeedFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D39FEC42F717AD9009D93FF /* UserFeedFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserFeedFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DF9DFA82F97B8360092AE96 /* UserFeedFramework.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserFeedFramework.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -60,6 +61,7 @@
 		0D39FEAF2F717AD9009D93FF = {
 			isa = PBXGroup;
 			children = (
+				0DF9DFA82F97B8360092AE96 /* UserFeedFramework.xctestplan */,
 				0D39FEBB2F717AD9009D93FF /* UserFeedFramework */,
 				0D39FEC82F717AD9009D93FF /* UserFeedFrameworkTests */,
 				0D39FEBA2F717AD9009D93FF /* Products */,
@@ -158,6 +160,8 @@
 			knownRegions = (
 				en,
 				Base,
+				el,
+				"pt-BR",
 			);
 			mainGroup = 0D39FEAF2F717AD9009D93FF;
 			minimizedProjectReferenceProxies = 1;
@@ -433,6 +437,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gr.dimimall.UserFeedFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -452,6 +459,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gr.dimimall.UserFeedFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
