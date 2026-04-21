@@ -12,9 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Show available simulators
+        run: xcrun simctl list devices
+
       - name: Build & Test
         run: |
           xcodebuild clean test \
             -project UserFeedFramework/UserFeedFramework.xcodeproj \
             -scheme UserFeedFramework \
-            -destination "platform=iOS Simulator"
+            -destination "platform=iOS Simulator,OS=latest,name=iPhone 14" \
+            CODE_SIGNING_REQUIRED=NO
