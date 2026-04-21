@@ -17,4 +17,4 @@ jobs:
           xcodebuild clean test \
             -project UserFeedFramework/UserFeedFramework.xcodeproj \
             -scheme UserFeedFramework \
-            -destination "platform=macOS"
+            -destination "platform=iOS Simulator,OS=latest,name=iPhone 17"
