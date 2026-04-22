@@ -26,9 +26,22 @@
 		0DF9DFA82F97B8360092AE96 /* UserFeedFramework.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserFeedFramework.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0D3045FB2F994B9700E43125 /* Exceptions for "UserFeedFramework" folder in "UserFeedFrameworkTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: User.strings",
+			);
+			target = 0D39FEC32F717AD9009D93FF /* UserFeedFrameworkTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0D39FEBB2F717AD9009D93FF /* UserFeedFramework */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0D3045FB2F994B9700E43125 /* Exceptions for "UserFeedFramework" folder in "UserFeedFrameworkTests" target */,
+			);
 			path = UserFeedFramework;
 			sourceTree = "<group>";
 		};

@@ -34,7 +34,7 @@ public final class UserPresenter {
         self.errorView = errorView
     }
     
-    public var title: String {
+    public static var title: String {
         return NSLocalizedString("USER_VIEW_TITLE", tableName: "User", bundle: Bundle(for: UserPresenter.self), comment: "Title of the user view")
     }
     
@@ -48,7 +48,7 @@ public final class UserPresenter {
         feedView.display(UserViewModel(user: user))
     }
     
-    public func didFinishLoadingFeed(with error: Error) {
+    public func didFinishLoadingUser(with error: Error) {
         errorView.display(.error(message: userLoadError))
         loadingView.display(UserLoadingViewModel(isLoading: false))
     }
