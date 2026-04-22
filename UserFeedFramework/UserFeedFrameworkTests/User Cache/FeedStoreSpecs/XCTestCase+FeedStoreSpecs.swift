@@ -38,13 +38,23 @@ extension FeedStoreSpecs where Self: XCTestCase {
         XCTAssertNil(insertionError, "Expected to override cache successfully", file: file, line: line)
     }
     
-    func assertThatInsertOverridesPreviouslyInsertedCacheValues(on sut: UserStore, file: StaticString = #file, line: UInt = #line) {
-        insert((uniqueUserFeed().local, Date()), to: sut)
-        
+    func assertThatInsertOverridesPreviouslyInsertedCacheValues(
+        on sut: UserStore,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) {
+        let timestamp = Date()
+
+        insert((uniqueUserFeed().local, timestamp), to: sut)
+
         let latestFeed = uniqueUserFeed().local
-        let latestTimestamp = Date()
-        
-        expect(sut, toRetrieve: .success(CachedUserFeed(latestFeed, timestamp: latestTimestamp)), file: file, line: line)
+
+        expect(
+            sut,
+            toRetrieve: .success(CachedUserFeed(latestFeed, timestamp: timestamp)),
+            file: file,
+            line: line
+        )
     }
     
     func assertThatDeleteDeliversNoErrorOnEmptyCache(on sut: UserStore, file: StaticString = #file, line: UInt = #line) {
@@ -93,7 +103,7 @@ extension FeedStoreSpecs where Self: XCTestCase {
             op3.fulfill()
         }
         
-        wait(for: completedOperationsInOrder, timeout: 5.0)
+        wait(for: [op1, op2, op3], timeout: 5.0)
         
         XCTAssertEqual(completedOperationsInOrder, [op1,op2,op3], "Expected side-effects to run serially but operations finished in the wrong order", file: file, line: line)
     }

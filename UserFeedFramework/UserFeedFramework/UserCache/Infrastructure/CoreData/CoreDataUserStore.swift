@@ -11,6 +11,8 @@ final public class CoreDataUserStore {
     private static let modelName: String = "UserStore"
     private static let model = NSManagedObjectModel.with(name: modelName, in: Bundle(for: CoreDataUserStore.self))
     
+    private let queue = DispatchQueue(label: "CoreDataUserStore.queue", qos: .userInitiated)
+    
     private let container: NSPersistentContainer
     private let context: NSManagedObjectContext
     
@@ -34,8 +36,10 @@ final public class CoreDataUserStore {
     
     func perform(_ actions: @escaping (NSManagedObjectContext) -> Void) {
         let context = self.context
-        context.perform {
-            actions(context)
+        queue.async {
+            context.performAndWait {
+                actions(context)
+            }
         }
     }
     

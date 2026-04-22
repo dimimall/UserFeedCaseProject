@@ -28,7 +28,7 @@ extension ManagedFeedUser {
     static func users(from localUser: [LocalFeedUser], in context: NSManagedObjectContext) -> NSOrderedSet {
         return NSOrderedSet(array: localUser.map { local in
             let managed = ManagedFeedUser(context: context)
-            managed.id = Int(local.id)
+            managed.id = local.id
             managed.email = local.email
             managed.firstName = local.firstName
             managed.lastName = local.lastName
@@ -38,6 +38,6 @@ extension ManagedFeedUser {
     }
     
     var local: LocalFeedUser {
-        return LocalFeedUser(id: Int(id), firstName: firstName, lastName: lastName, email: email, image: image)
+        return LocalFeedUser(id: id, firstName: firstName, lastName: lastName, email: email, image: image)
     }
 }

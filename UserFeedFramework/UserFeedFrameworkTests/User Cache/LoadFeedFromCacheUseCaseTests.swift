@@ -31,7 +31,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         let retrievalError = anyNSError()
         
         expect(sut, toCompleteWith: .failure(retrievalError), when: {
-            store.completeDeletion(with: retrievalError)
+            store.completeRetrieval(with: retrievalError)
         })
     }
     
@@ -41,7 +41,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         sut.loadUsers {
             _ in
         }
-        store.completeDeletion(with: anyNSError())
+        store.completeRetrieval(with: anyNSError())
         XCTAssertEqual(store.receivedMessages, [.retrieve])
     }
     
