@@ -88,6 +88,5 @@ final class UserPresenterTests: XCTestCase {
             messages.insert(.display(errorMessage: viewModel.message))
         }
         
-        
     }
 }
